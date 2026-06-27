@@ -1,0 +1,14 @@
+# Prerequisites
+.env
+*.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+
+# Build and Tooling
+node_modules/
+dist/
+.direnv/
