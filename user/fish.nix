@@ -1,4 +1,4 @@
-{ inputs, pkgs, lib, ... }:
+{ config, inputs, pkgs, lib, ... }:
 
 let
 
@@ -26,8 +26,8 @@ in
     shellAliases = myAliases;
     generateCompletions = true;
     loginShellInit = ''
-      if test -z "WAYLAND_DISPLAY"; and test "XDG_VTNR" = "1"
-        exec niri-session
+      if [ -z $WAYLAND_DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]
+        exec ${config.programs.niri.package}/bin/niri-session -l
       end
     '';
     interactiveShellInit = ''

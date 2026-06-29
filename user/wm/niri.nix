@@ -13,8 +13,6 @@ in {
    package = pkgs.niri;
  };
 
- #nixpkgs.overlays = [inputs.niri.overlays.niri];
-  
  programs.niri.config = [
     (plain "input" [
       (plain "keyboard" [
