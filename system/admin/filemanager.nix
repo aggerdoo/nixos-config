@@ -43,4 +43,8 @@
       "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
     };
   };
+
+  programs.xfconf = {
+    enable = true;
+  };
 }
