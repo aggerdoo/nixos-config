@@ -54,6 +54,10 @@ in
     environment.systemPackages = with pkgs; [
       protonup-qt
       protontricks
+
+      (writeShellScriptBin "steam-gamescope" ''
+        exec gamescope -W 2560 -H 1440 -e --hide-cursor-delay 999999 -- steam -tenfoot
+      '')
     ];
   };
 
