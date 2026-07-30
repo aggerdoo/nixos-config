@@ -42,7 +42,7 @@
   networking.hostName = "liberty"; # Define your hostname.
 
   # Configure network connections interactively with nmcli or nmtui.
-  networking.networkmanager.enable = true;
+  #networking.networkmanager.enable = true;
 
   # Set your time zone.
   time.timeZone = "Europe/London";
@@ -126,6 +126,10 @@
   services.upower = {
     enable = true;
   };
+
+  services.udev.extraRules = ''
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="10f5", ATTRS{idProduct}=="7118", MODE="0666"
+  '';
 
   system.stateVersion = "26.05"; # Did you read the comment?
 
