@@ -6,5 +6,6 @@
     ./nh.nix
     ./filemanager.nix
     ./pipewire.nix
+    ./networking.nix
   ];
 }
