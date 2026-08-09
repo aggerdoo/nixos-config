@@ -15,5 +15,5 @@
     };
   };
 
-  networking.useDHCP = libmkDefault true;
+  networking.useDHCP = lib.mkDefault true;
 }
