@@ -11,7 +11,7 @@ in
   config = lib.mkIf cfg.enable {
     # 1. The Zen Kernel
     # Optimized for desktop responsiveness and gaming latency.
-    boot.kernelPackages = pkgs.linuxPackages_zen;
+    #boot.kernelPackages = pkgs.linuxPackages_zen;
 
     # 2. Virtual Memory Tweaks (CRITICAL for DX12)
     # Many DX12 games (Hogwarts Legacy, Star Citizen, Halo) crash

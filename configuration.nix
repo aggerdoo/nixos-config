@@ -17,7 +17,7 @@
   boot.supportedFilesystems = [ "bcachefs" ];
 
   # Use latest kernel.
-  #boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   hardware.graphics = {
     enable = true;
@@ -117,6 +117,10 @@
     xwayland-satellite
     ghostty
     fish
+    ookla-speedtest
+    iw
+    ethtool
+    vlc
     pwvucontrol
   ];
 
