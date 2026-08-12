@@ -118,6 +118,7 @@
     ghostty
     fish
     ookla-speedtest
+    czkawka-full
     iw
     ethtool
     vlc
